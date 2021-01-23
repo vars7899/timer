@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app {
+    height: 100vh;
+    font-family: "Exo", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(30, 31, 41);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(30, 31, 41, 1) 28%,
+        rgba(30, 31, 41, 1) 100%
+    );
+    z-index: 0;
+}
+.star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./images/bg-stars.svg");
+    background-repeat: repeat-x;
+    object-fit: cover;
+    height: 100%;
+    z-index: 2;
+    width: 100%;
+}
+.mtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("./images/pattern-hills.svg");
+    background-repeat: repeat-x;
+    object-fit: cover;
+    height: 10rem;
+    z-index: 5;
+    width: 100%;
+}
+.banner {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    font-size: 1rem;
+}
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6rem;
+}
+.days {
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.days p {
+    color: hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding-top: 0.5rem;
+}
+.box {
+    background: hsl(236, 21%, 26%);
+    width: 8rem;
+    height: 10rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.box > p {
+    font-size: 3.5rem;
+    color: hsl(345, 95%, 68%);
+    font-weight: bold;
+}
+@media screen and (max-width: 675px) {
+    .banner {
+        font-size: 0.5rem;
+    }
+    .days {
+        margin: 0 0.25rem 0 0.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .days p {
+        font-size: 0.5rem;
+    }
+    .box {
+        width: 4.5rem;
+        height: 6rem;
+    }
+    .box > p {
+        font-size: 2.5rem;
+    }
+}
